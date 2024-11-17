@@ -132,11 +132,17 @@ class FileManager:
         if not app_data_folder.exists() or not app_data_folder.is_dir():
             raise FileNotFoundError(f"Data folder not found: {app_data_folder}")
 
-        required_files = ['secrets.yaml', 'config.yaml', 'plain_text_resume.yaml']
+        required_files = ['config.yaml', 'plain_text_resume.yaml']
         missing_files = [file for file in required_files if not (app_data_folder / file).exists()]
         
         if missing_files:
             raise FileNotFoundError(f"Missing files in the data folder: {', '.join(missing_files)}")
+        
+        secret_files = ['secrets.yaml']
+        missing_secret_files = [file for file in secret_files if not (Path("/Users/jheg/Documents/Dev") / file).exists()]
+        
+        if missing_secret_files:
+            raise FileNotFoundError(f"Missing files in the data folder: {', '.join(missing_secret_files)}")
 
         output_folder = app_data_folder / 'output'
         output_folder.mkdir(exist_ok=True)

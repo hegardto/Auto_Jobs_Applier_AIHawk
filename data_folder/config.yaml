@@ -13,7 +13,7 @@ experience_level:
 job_types:
   full_time: true
   contract: false
-  part-time: false
+  part_time: false
   temporary: false
   internship: false
   other: false
@@ -22,11 +22,12 @@ job_types:
 date:
   all_time: false
   month: false
-  week: false
-  24_hours: true
+  week: true
+  24_hours: false
 
 positions:
   - Business developer
+  - Team Lead
   - Business development manager
   - Project manager
   - Strategy manager
