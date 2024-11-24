@@ -97,7 +97,7 @@ class AIHawkJobManager:
             job_page_number = -1
             logger.info(f"Collecting data for {position} in {location}.",color="yellow")
             try:
-                while True:
+                while job_page_number < 6:
                     page_sleep += 1
                     job_page_number += 1
                     logger.info(f"Going to job page {job_page_number}", color="yellow")
@@ -146,7 +146,7 @@ class AIHawkJobManager:
             logger.debug(f"Starting the search for {position} in {location}.")
 
             try:
-                while True:
+                while job_page_number < 6:
                     page_sleep += 1
                     job_page_number += 1
                     logger.debug(f"Going to job page {job_page_number}")
