@@ -162,3 +162,6 @@ venv.bak/
 mono_crash.*
 
 job_applications/
+
+data_folder/*
+data_folder/secrets.yaml
